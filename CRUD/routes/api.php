@@ -17,5 +17,5 @@ Route::get('/user', function (Request $request) {
 // Route::apiResource('joud', CategoryController::class);
 
 use App\Http\Controllers\BookController; // Ensure this matches the actual namespace of BookController
-
+Route::get('books', [CategoryController::class, 'index']);
 Route::apiResource('books',BookController::class); // Ensure BookController exists in the specified namespace
