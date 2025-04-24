@@ -1,10 +1,10 @@
 <?php
 
-use App\Http\Controllers\JoudController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BookController;
+use App\Http\Controllers\JoudController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
 
 Route::get('/joud',[JoudController::class,'index']);
+Route::get('/',[BookController::class,'index']);
